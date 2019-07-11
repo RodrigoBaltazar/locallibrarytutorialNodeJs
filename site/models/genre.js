@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+
 var Schema = mongoose.Schema;
 
 var GenreSchema = new Schema(
@@ -13,6 +14,7 @@ GenreSchema
 .virtual('url')
 .get(function () {
   return '/catalog/genre/' + this._id;
+
 });
 
 //Export model
